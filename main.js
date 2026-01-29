@@ -237,3 +237,4 @@ const slideText = document.getElementById("slide-text");
 coffeeIcon.addEventListener("click", () => {
 slideText.classList.toggle("show");
 });
+coffeeIcon.style.zIndex=101
