@@ -141,7 +141,7 @@ document.getElementById("start-btn").addEventListener("click", () => {
   bubbleOverlay.setPosition(personCoord);
 });
 
-const text = "Brauchst du Kaffe? \n Verschiebe auf einen Ort und finde heraus wie viele Kaffes in der Umgebung hat.";
+const text = "Brauchst du Kaffe? \n Verschiebe mich auf einen Ort und finde heraus wie viele Kaffes in der Umgebung hat.";
 const typingTarget = document.getElementById("typing-text");
 
 let i = 0;
