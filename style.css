@@ -1,0 +1,177 @@
+@import "node_modules/ol/ol.css";
+@import "node_modules/ol-layerswitcher/dist/ol-layerswitcher.css";
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.Titel {
+  display: flex;
+  height: 10vh;
+  color: white;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(174, 163, 132);
+  height: 10vh;
+  align-items: center;
+  gap: 5px
+}
+
+.Titel img {
+  width: 40px;
+  height: 40px;
+}
+.Titel h2 {
+  float: left;
+  margin-left: 10px;
+  color: white;
+}
+
+#map {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  height: 90vh;
+  width: 100%;
+}
+
+
+.ol-layerswitcher {
+position: absolute;
+top: 10px;
+right: 10px;
+}
+
+
+.ol-layerswitcher .panel {
+display: none;
+background: white;
+padding: 10px;
+border-radius: 6px;
+}
+
+
+.ol-layerswitcher:hover .panel {
+display: block;
+}
+
+.layer-switcher {
+right: 10px;
+top: 10px;
+}
+
+
+.layer-switcher .panel {
+display: none;
+}
+
+.layer-switcher:hover .panel {
+display: block;
+}
+
+.layer-switcher button {
+background: url("/layers-svgrepo-com.svg") no-repeat center;
+background-size: contain;
+border: none;
+background-color: white;
+width: 35px;
+height: 35px;
+}
+
+#corner-circle {
+position: fixed;
+bottom: -40px; /* halb aus der Ecke */
+left: -20px;
+width: 180px;
+height: 180px;
+background: rgba(255, 255, 255, 0.644);
+border-radius: 50%;
+box-shadow: 0 4px 12px rgb(0, 0, 0);
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+color: #000000;
+z-index: 500;
+}
+
+#corner-circle span {
+  transform: rotate(-30deg);
+  text-align: center;
+  border: 5px;
+  padding: 15px;
+}
+
+.ol-popup {
+position: absolute;
+background: white;
+padding: 5px 10px 5px 5px;
+border-radius: 8px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+width: fit-content;
+min-width: 70px;
+font-size: 10px;
+}
+
+.ol-popup-content {
+display: flex;
+align-items: center;
+gap: 10px; /* 👈 genau deine 10px */
+}
+
+.ol-popup a {
+  color: #66b3ff;
+  text-decoration: none;
+  font-size: 8px;
+}
+
+.ol-popup a:hover {
+  text-decoration: underline;
+}
+
+
+.ol-popup-closer {
+position: absolute;
+top: 4px;
+right: 10px;
+text-decoration: none;
+cursor: pointer;
+height: 2px;
+width: 2px;
+}
+
+
+#intro-overlay {
+position: fixed;
+inset: 0;
+background: rgba(0,0,0,0.4);
+z-index: 1000;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.speech-bubble {
+background: white;
+padding: 20px 24px;
+border-radius: 20px;
+max-width: 260px;
+font-family: sans-serif;
+box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+position: relative;
+}
+
+#start-btn {
+margin-top: 12px;
+padding: 8px 12px;
+border: none;
+border-radius: 12px;
+background: rgb(174, 163, 132);
+color: white;
+font-weight: bold;
+cursor: pointer;
+}
