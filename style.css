@@ -23,11 +23,30 @@ html, body {
 .Titel img {
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
+
 .Titel h2 {
   float: left;
   margin-left: 10px;
   color: white;
+}
+
+.slide-text {
+max-width: 0;
+overflow: hidden;
+white-space: nowrap;
+opacity: 0;
+transform: translateX(-10px);
+transition: max-width 0.4s ease, opacity 0.3s ease, transform 0.4s ease;
+font-size: 12px;
+color: #ffffff;
+}
+
+.slide-text.show {
+max-width: 200px; /* wie weit er raus darf */
+opacity: 1;
+transform: translateX(0);
 }
 
 #map {
