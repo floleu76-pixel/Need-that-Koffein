@@ -1,4 +1,4 @@
-name: Build
+name: Build and Deploy
 
 on:
   push:
@@ -30,3 +30,24 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Upload production-ready build files
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
