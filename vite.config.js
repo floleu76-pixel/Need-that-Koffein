@@ -1,5 +1,5 @@
 export default {
-  base: '/Need-that-Koffein/',
+  base: '/Need-that-Caffeine/',
   build: {
     sourcemap: true,
   }
